@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body>
+ 
+
+  <!-- ナビゲーションバー -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="logo">KOMORI</span>
+      <ul class="nav-links">
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#insta">Instagram</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+　　<h1>
+	<br><br>
+</h1>
+
+  <main>
+    <section id="profile" class="fade-in">
+  <div class="profile-card">
+  <img src="IMG_1335.jpeg" alt="顔写真"　width="300">
+  <div class="text-box">
+
+  <h2>小森武尊</h2>
+
+<p>趣味:野球観戦です。
+  <br>一言：勿論巨人ファンです。<br>最近の習慣は朝エスプレッソを入れます。<br>これをすることにより気合が入ります。
+</p>
+  </div>
+</div>
+</selection>
+
+
+    <section id="insta" class="fade-in">
+      <h2>Instagram投稿</h2>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/18050209403148325/" data-instgrm-version="14"></blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+
+
+    <section id="contact" class="fade-in">
+      <h2>ご依頼フォーム</h2>
+      <form action="https://formsubmit.co/take10cafe@icloud.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="お名前" required>
+        <input type="email" name="email" placeholder="メールアドレス" required>
+        <textarea name="message" rows="5" placeholder="ご依頼内容をご記入ください" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </section>
+</main>
+
+
+  <script>
+    // スクロール時のフェードインアニメーション
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    fadeIns.forEach(f => observer.observe(f));
+  </script>
+
+
+</body>
+</html>
